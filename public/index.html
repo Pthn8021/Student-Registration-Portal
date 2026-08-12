@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Student Registration Portal</h1>
+    <p>MongoDB Mini Build Challenge</p>
+  </header>
+
+  <main>
+    <!-- Registration Form -->
+    <section class="card">
+      <h2 id="form-title">Register a Student</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="e.g. Rehan Shaikh">
+
+        <label for="rollNumber">Roll Number</label>
+        <input type="text" id="rollNumber" required placeholder="e.g. EXTC045">
+
+        <label for="branch">Branch</label>
+        <select id="branch" required>
+          <option value="">-- Select Branch --</option>
+          <option value="EXTC">EXTC</option>
+          <option value="Computer">Computer</option>
+          <option value="IT">IT</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Civil">Civil</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="e.g. rehan@example.com">
+
+        <label for="year">Year</label>
+        <select id="year" required>
+          <option value="">-- Select Year --</option>
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+
+        <button type="submit" id="submit-btn">Register Student</button>
+        <button type="button" id="cancel-edit-btn" style="display:none;">Cancel Edit</button>
+      </form>
+    </section>
+
+    <!-- Search + Filter -->
+    <section class="card">
+      <h2>Find Students</h2>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search by name...">
+        <select id="filter-branch">
+          <option value="">All Branches</option>
+          <option value="EXTC">EXTC</option>
+          <option value="Computer">Computer</option>
+          <option value="IT">IT</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Civil">Civil</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Branch stats (bonus demo of aggregation) -->
+    <section class="card">
+      <h2>Branch-wise Count <span class="hint">(MongoDB aggregation)</span></h2>
+      <div id="branch-stats"></div>
+    </section>
+
+    <!-- Student List -->
+    <section class="card">
+      <h2>Registered Students</h2>
+      <table id="students-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll No.</th>
+            <th>Branch</th>
+            <th>Email</th>
+            <th>Year</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="students-body">
+          <!-- filled dynamically by script.js -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

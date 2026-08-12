@@ -1,0 +1,90 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  color: #1f2937;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+header h1 { margin: 0 0 4px; font-size: 26px; }
+header p { margin: 0; opacity: 0.85; }
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.card h2 { margin-top: 0; font-size: 18px; }
+.hint { font-size: 12px; font-weight: normal; color: #6b7280; }
+
+form { display: flex; flex-direction: column; gap: 10px; }
+
+label { font-size: 13px; font-weight: 600; color: #374151; }
+
+input, select {
+  padding: 9px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #1e3a8a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+button:hover { background: #1e40af; }
+
+#cancel-edit-btn { background: #6b7280; }
+#cancel-edit-btn:hover { background: #4b5563; }
+
+.search-bar { display: flex; gap: 10px; }
+.search-bar input, .search-bar select { flex: 1; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #e5e7eb; }
+th { background: #f9fafb; }
+
+.action-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-right: 6px;
+  margin-top: 0;
+}
+
+.edit-btn { background: #2563eb; }
+.delete-btn { background: #dc2626; }
+.delete-btn:hover { background: #b91c1c; }
+
+#branch-stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.stat-chip {
+  background: #eef2ff;
+  color: #1e3a8a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
